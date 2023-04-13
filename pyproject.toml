@@ -3,6 +3,7 @@ name = "verset"
 version = "0.1.0"
 description = "pyprojects.toml dependencies version manager"
 authors = ["fdev31 <fdev31@gmail.com>"]
+homepage = "https://github.com/fdev31/verset"
 license = "MIT"
 readme = "README.md"
 
@@ -12,8 +13,7 @@ verset = 'verset:main'
 [tool.poetry.dependencies]
 python = "^3.10" # 3.10.10
 tomlkit = "^0.11.7" # 0.11.7
-# Poetry pre-1.2.x style, understood by Poetry 1.0–1.2
-# [tool.poetry.dev-dependencies]
+
 [tool.poetry.group.dev.dependencies]
 vulture = "^2.7"
 black = "^23.3.0"
