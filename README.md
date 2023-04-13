@@ -50,12 +50,13 @@ python-dateutil = {version="~2.8.2", optional=true} # ^2.8.2
 jira = {version="^3.1.1", optional=true} # Not found
 six = {version="~1.16.0", optional=true} # ^1.16
 pygments = {version="~2.14.0", optional=true} # ^2.12.0
+
 ```
 and if you run it again, you are back to the original version (as tilde):
 
 ```toml
 [tool.poetry.dependencies]
-docutils = "~0.19" # >= 0.12
+docutils = "~0.12" # ~0.19
 python = "~3.8" # ~3.10.10
 
 python-dateutil = {version="~2.8.2", optional=true} # ~2.8.2
@@ -68,7 +69,7 @@ if you would like the more inclusive carret versions, just use `veset relax`:
 
 ```toml
 [tool.poetry.dependencies]
-docutils = "~0.19" # >= 0.12
+docutils = "^0.19" # ~0.12
 python = "^3.10.10" # ~3.8
 
 python-dateutil = {version="^2.8.2", optional=true} # ~2.8.2
