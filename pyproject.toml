@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "verset"
-version = "0.1.0"
+version = "0.1.1"
 description = "pyprojects.toml dependencies version manager"
 authors = ["fdev31 <fdev31@gmail.com>"]
 homepage = "https://github.com/fdev31/verset"
