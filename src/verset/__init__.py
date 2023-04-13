@@ -32,17 +32,20 @@ def clear(deps):
 def extract_version(txt):
     i = 0
     for i, c in enumerate(txt):
-        if c not in '^~>=<':
+        if c not in '^~>=< ':
             break
     v = txt[i:]
-    print(v)
     if v[0].isdigit():
         return v
     
 
 def _apply(deps, prefix):
     for dep in deps:
+        _comment = deps[dep]._trivia.comment
+        if not _comment:
+            continue
         version = extract_version(deps[dep]._trivia.comment.split('#', 1)[1].strip())
+
         if version:
             d = deps[dep]
             if isinstance(d, tomlkit.items.InlineTable):
